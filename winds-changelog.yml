@@ -1,0 +1,11 @@
+1.0.0-alpha01:
+  info: "August 30, 2024"
+  content: >
+    # 🎉 Introducing CrossLens v1.0.0-alpha01 🧩
+
+    🔍 **CrossLens** provides precise platform insights for Kotlin Multiplatform projects, ensuring seamless adaptation across various environments. Whether you're developing for mobile, desktop, or IoT, CrossLens helps you understand and manage platform-specific details with ease.
+
+    ## Features
+    - **Multi-Platform Support:** Get detailed information about the platform your code is running on, across different environments.
+    - **Seamless Integration:** Easily integrate with your existing Kotlin Multiplatform projects.
+    - **Up-to-Date Insights:** Stay informed with the latest platform information to ensure compatibility and optimal performance.
