@@ -1,0 +1,19 @@
+public final class dev/teogor/crosslens/core/ContextUtilsKt {
+	public static final fun getApplicationContext ()Landroid/content/Context;
+	public static final fun getCurrentActivity ()Landroid/app/Activity;
+}
+
+public final class dev/teogor/crosslens/core/startup/ActivityInitializer : androidx/startup/Initializer {
+	public fun <init> ()V
+	public synthetic fun create (Landroid/content/Context;)Ljava/lang/Object;
+	public fun create (Landroid/content/Context;)V
+	public fun dependencies ()Ljava/util/List;
+}
+
+public final class dev/teogor/crosslens/core/startup/ContextInitializer : androidx/startup/Initializer {
+	public fun <init> ()V
+	public synthetic fun create (Landroid/content/Context;)Ljava/lang/Object;
+	public fun create (Landroid/content/Context;)V
+	public fun dependencies ()Ljava/util/List;
+}
+

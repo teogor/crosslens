@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     Copyright 2024 Teogor (Teodor Grigor)
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+        <!--
+            InitializationProvider is used by AndroidX Startup to manage the initialization of components
+            before other parts of the app that may depend on them.
+
+            The InitializationProvider is a special provider that is registered in the manifest to
+            ensure that the specified initializers are run during app startup.
+        -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+
+            <!--
+                ContextInitializer is used to set up the global application context.
+                This meta-data tag registers the ContextInitializer with AndroidX Startup, ensuring
+                that it is called when the application starts.
+
+                android:name: The fully qualified class name of the initializer.
+                android:value: The initialization library (here, androidx.startup) used to manage the initializer.
+            -->
+            <meta-data
+                android:name="dev.teogor.crosslens.core.startup.ContextInitializer"
+                android:value="androidx.startup" />
+
+            <!--
+                ActivityInitializer is used to set up the activity binder for tracking activity lifecycle events.
+                This meta-data tag registers the ActivityBinderInitializer with AndroidX Startup, ensuring
+                that it is called when the application starts.
+
+                android:name: The fully qualified class name of the initializer.
+                android:value: The initialization library (here, androidx.startup) used to manage the initializer.
+            -->
+            <meta-data
+                android:name="dev.teogor.crosslens.core.startup.ActivityInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>
