@@ -23,7 +23,9 @@
 Add the following to your `build.gradle.kts`:
 ```kotlin
 dependencies {
-  implementation("dev.teogor.crosslens:crosslens-core:1.0.0-alpha01")
+  implementation("dev.teogor.crosslens:crosslens-compose:1.0.0-alpha02")
+  implementation("dev.teogor.crosslens:crosslens-core:1.0.0-alpha02")
+  implementation("dev.teogor.crosslens:crosslens-ui:1.0.0-alpha02")
 }
 ```
 

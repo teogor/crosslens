@@ -21,6 +21,7 @@ nav:
   - Releases:
     - releases/index.md
     - Changelog:
+      - 1.0.0-alpha02: releases/changelog/1.0.0-alpha02.md
       - 1.0.0-alpha01: releases/changelog/1.0.0-alpha01.md
   - Reference: reference.md
   - Sponsor: sponsor.md
