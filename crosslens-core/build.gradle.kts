@@ -87,6 +87,9 @@ kotlin {
     }
     commonMain.dependencies {
     }
+    commonTest.dependencies {
+      implementation(libs.jetbrains.kotlin.test)
+    }
   }
 }
 
