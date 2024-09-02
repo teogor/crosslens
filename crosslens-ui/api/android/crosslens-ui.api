@@ -1,0 +1,16 @@
+public abstract interface class dev/teogor/crosslens/ui/VisibilityState {
+	public abstract fun getScope ()Lkotlinx/coroutines/CoroutineScope;
+	public abstract fun hide ()V
+	public abstract fun isVisible ()Z
+	public abstract fun show ()V
+	public abstract fun toggle ()V
+}
+
+public abstract interface class dev/teogor/crosslens/ui/VisibilityState$Factory {
+	public abstract fun create (Z)Ldev/teogor/crosslens/ui/VisibilityState;
+}
+
+public final class dev/teogor/crosslens/ui/VisibilityStateKt {
+	public static final fun rememberVisibilityState (ZLandroidx/compose/runtime/Composer;II)Landroidx/compose/runtime/MutableState;
+}
+

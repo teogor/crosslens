@@ -97,6 +97,7 @@ kotlin {
       implementation(libs.androidx.lifecycle.runtime.compose)
 
       implementation(projects.crosslensCore)
+      implementation(projects.crosslensUi)
     }
     desktopMain.dependencies {
       implementation(compose.desktop.currentOs)

@@ -34,3 +34,4 @@ dependencyResolutionManagement {
 include(":composeApp")
 
 include(":crosslens-core")
+include(":crosslens-ui")

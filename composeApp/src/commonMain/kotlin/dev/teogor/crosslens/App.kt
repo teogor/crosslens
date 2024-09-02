@@ -23,9 +23,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import dev.teogor.crosslens.ui.rememberVisibilityState
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 private const val VERSION = "1.0.0-alpha01"
@@ -38,6 +41,12 @@ private val FEATURES = listOf(
 @Composable
 @Preview
 public fun App() {
+  val visibility by rememberVisibilityState(true)
+  LaunchedEffect(Unit) {
+    visibility.hide()
+    visibility.show()
+    visibility.toggle()
+  }
   MaterialTheme {
     Surface(
       modifier = Modifier.fillMaxSize(),
