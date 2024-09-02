@@ -86,6 +86,9 @@ kotlin {
       implementation(libs.androidx.startup.runtime)
     }
     commonMain.dependencies {
+      implementation(libs.kotlinx.collections.immutable)
+      implementation(libs.kotlinx.coroutines.core)
+      implementation(libs.kotlinx.atomicfu)
     }
     commonTest.dependencies {
       implementation(libs.jetbrains.kotlin.test)
