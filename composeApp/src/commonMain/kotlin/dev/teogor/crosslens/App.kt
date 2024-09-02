@@ -25,9 +25,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import dev.teogor.crosslens.core.buildHashCode
 import dev.teogor.crosslens.ui.rememberVisibilityState
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -46,6 +48,14 @@ public fun App() {
     visibility.hide()
     visibility.show()
     visibility.toggle()
+  }
+  remember {
+    buildHashCode {
+      append(visibility.isVisible)
+      append(visibility.scope)
+    }.let {
+      println("HashCode: $it")
+    }
   }
   MaterialTheme {
     Surface(
