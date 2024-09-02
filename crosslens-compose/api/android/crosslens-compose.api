@@ -1,0 +1,17 @@
+public final class dev/teogor/crosslens/compose/lifecycle/ConfigurationStateMonitor {
+	public static final field $stable I
+	public fun <init> (Landroid/app/Activity;)V
+	public final fun isChanging ()Z
+}
+
+public final class dev/teogor/crosslens/compose/lifecycle/ConfigurationStateMonitor_androidKt {
+	public static final fun getConfigurationStateMonitor (Landroidx/compose/runtime/Composer;I)Ldev/teogor/crosslens/compose/lifecycle/ConfigurationStateMonitor;
+}
+
+public final class dev/teogor/crosslens/compose/lifecycle/EffectsKt {
+	public static final fun DisposableEffectIgnoringConfiguration (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
+	public static final fun DisposableEffectIgnoringConfiguration (Ljava/lang/Object;Ljava/lang/Object;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
+	public static final fun DisposableEffectIgnoringConfiguration (Ljava/lang/Object;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
+	public static final fun DisposableEffectIgnoringConfiguration ([Ljava/lang/Object;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V
+}
+
