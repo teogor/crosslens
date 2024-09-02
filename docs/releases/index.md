@@ -9,15 +9,17 @@ Learn more: **[User Guide](../user-guide.md)** and **[Code Samples](../code-samp
 
 API Reference  
 [`dev.teogor.crosslens:crosslens-*`](../html/)  
-[`dev.teogor.crosslens:crosslens-core`](../html/crosslens-core)
+[`dev.teogor.crosslens:crosslens-compose`](../html/crosslens-compose)  
+[`dev.teogor.crosslens:crosslens-core`](../html/crosslens-core)  
+[`dev.teogor.crosslens:crosslens-ui`](../html/crosslens-ui)
 
 [//]: # (REGION-API-REFERENCE)
 
 [//]: # (REGION-RELEASE-TABLE)
 
-| Latest Update     |  Stable Release  |  Release Candidate  |  Beta Release  |  Alpha Release  |
-|:------------------|:----------------:|:-------------------:|:--------------:|:---------------:|
-| August 30, 2024   |        -         |          -          |       -        |  1.0.0-alpha01  |
+| Latest Update        |  Stable Release  |  Release Candidate  |  Beta Release  |  Alpha Release  |
+|:---------------------|:----------------:|:-------------------:|:--------------:|:---------------:|
+| September 02, 2024   |        -         |          -          |       -        |  1.0.0-alpha02  |
 
 [//]: # (REGION-RELEASE-TABLE)
 
@@ -31,9 +33,11 @@ To use Crosslens in your app, add the following dependencies to your app's `buil
 
     ```groovy title="build.gradle"
     dependencies {
-        def teogorCrosslens = "1.0.0-alpha01"
+        def teogorCrosslens = "1.0.0-alpha02"
         
+        implementation "dev.teogor.crosslens:crosslens-compose:$teogorCrosslens"
         implementation "dev.teogor.crosslens:crosslens-core:$teogorCrosslens"
+        implementation "dev.teogor.crosslens:crosslens-ui:$teogorCrosslens"
     }
     ```
 
@@ -41,9 +45,11 @@ To use Crosslens in your app, add the following dependencies to your app's `buil
 
     ```kotlin title="build.gradle.kts"
     dependencies {
-        val teogorCrosslens = "1.0.0-alpha01"
+        val teogorCrosslens = "1.0.0-alpha02"
         
+        implementation("dev.teogor.crosslens:crosslens-compose:$teogorCrosslens")
         implementation("dev.teogor.crosslens:crosslens-core:$teogorCrosslens")
+        implementation("dev.teogor.crosslens:crosslens-ui:$teogorCrosslens")
     }
     ```
 
@@ -66,6 +72,20 @@ for this library before you create a new one.
 [//]: # (REGION-VERSION-CHANGELOG)
 
 ### Version 1.0.0
+
+#### Version 1.0.0-alpha02
+
+September 02, 2024
+
+[`dev.teogor.crosslens:crosslens-*:1.0.0-alpha02`](https://github.com/teogor/crosslens/releases/1.0.0-alpha02) is released. [Version 1.0.0-alpha02 contains these commits](https://github.com/teogor/crosslens/compare/1.0.0-alpha01...1.0.0-alpha02)
+
+**Enhancement**
+
+* Implement Thread-Safe Collections `SynchronizedMap` and `SynchronizedSet` ([#5](https://github.com/teogor/crosslens/issues/5)) by [@teogor](https://github.com/teogor)
+* Implement Configuration State Monitoring for Compose ([#4](https://github.com/teogor/crosslens/issues/4)) by [@teogor](https://github.com/teogor)
+* Introduce Support for Platform-Specific Class Name Formats ([#3](https://github.com/teogor/crosslens/issues/3)) by [@teogor](https://github.com/teogor)
+* Introduce HashCodeBuilder Utility and Lazy HashCode Functions ([#2](https://github.com/teogor/crosslens/issues/2)) by [@teogor](https://github.com/teogor)
+* Introduce VisibilityState Interface and Composable Utilities for Visibility Management ([#1](https://github.com/teogor/crosslens/issues/1)) by [@teogor](https://github.com/teogor)
 
 #### Version 1.0.0-alpha01
 

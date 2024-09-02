@@ -37,9 +37,11 @@ To use Crosslens in your app, add the following dependencies to your app's `buil
 
     ```groovy title="build.gradle"
     dependencies {
-        def teogorCrosslens = "1.0.0-alpha01"
+        def teogorCrosslens = "1.0.0-alpha02"
         
+        implementation "dev.teogor.crosslens:crosslens-compose:$teogorCrosslens"
         implementation "dev.teogor.crosslens:crosslens-core:$teogorCrosslens"
+        implementation "dev.teogor.crosslens:crosslens-ui:$teogorCrosslens"
     }
     ```
 
@@ -47,9 +49,11 @@ To use Crosslens in your app, add the following dependencies to your app's `buil
 
     ```kotlin title="build.gradle.kts"
     dependencies {
-        val teogorCrosslens = "1.0.0-alpha01"
+        val teogorCrosslens = "1.0.0-alpha02"
         
+        implementation("dev.teogor.crosslens:crosslens-compose:$teogorCrosslens")
         implementation("dev.teogor.crosslens:crosslens-core:$teogorCrosslens")
+        implementation("dev.teogor.crosslens:crosslens-ui:$teogorCrosslens")
     }
     ```
 
@@ -66,20 +70,24 @@ First, define the dependencies in the `libs.versions.toml` file:
 
     ```toml title="gradle/libs.versions.toml"
     [versions]
-    teogor-crosslens = "1.0.0-alpha01"
+    teogor-crosslens = "1.0.0-alpha02"
     
     [libraries]
+    teogor-crosslens-compose = { group = "dev.teogor.crosslens", name = "crosslens-compose", version.ref = "teogor-crosslens" }
     teogor-crosslens-core = { group = "dev.teogor.crosslens", name = "crosslens-core", version.ref = "teogor-crosslens" }
+    teogor-crosslens-ui = { group = "dev.teogor.crosslens", name = "crosslens-ui", version.ref = "teogor-crosslens" }
     ```
 
 === "Module Based"
 
     ```toml title="gradle/libs.versions.toml"
     [versions]
-    teogor-crosslens = "1.0.0-alpha01"
+    teogor-crosslens = "1.0.0-alpha02"
     
     [libraries]
+    teogor-crosslens-compose = { module = "dev.teogor.crosslens:crosslens-compose", version.ref = "teogor-crosslens" }
     teogor-crosslens-core = { module = "dev.teogor.crosslens:crosslens-core", version.ref = "teogor-crosslens" }
+    teogor-crosslens-ui = { module = "dev.teogor.crosslens:crosslens-ui", version.ref = "teogor-crosslens" }
     ```
 
 Then, add these dependencies in your app's `build.gradle` file:
@@ -88,7 +96,9 @@ Then, add these dependencies in your app's `build.gradle` file:
 
     ```groovy title="build.gradle"
     dependencies {
+        implementation libs.teogor.crosslens.compose
         implementation libs.teogor.crosslens.core
+        implementation libs.teogor.crosslens.ui
     }
     ```
 
@@ -96,7 +106,9 @@ Then, add these dependencies in your app's `build.gradle` file:
 
     ```kotlin title="build.gradle.kts"
     dependencies {
+        implementation(libs.teogor.crosslens.compose)
         implementation(libs.teogor.crosslens.core)
+        implementation(libs.teogor.crosslens.ui)
     }
     ```
 

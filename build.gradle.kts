@@ -31,8 +31,6 @@ plugins {
   alias(libs.plugins.jetbrains.kotlinx.binary.compatibility)
 }
 
-
-
 winds {
   features {
     mavenPublishing = true
@@ -54,7 +52,7 @@ winds {
       group = "dev.teogor.crosslens"
       name = "crosslens"
       version = createVersion(1, 0, 0) {
-        alphaRelease(1)
+        alphaRelease(2)
       }
       nameFormat = NameFormat.FULL
       artifactIdFormat = ArtifactIdFormat.MODULE_NAME_ONLY
