@@ -96,6 +96,7 @@ kotlin {
       implementation(libs.androidx.lifecycle.viewmodel)
       implementation(libs.androidx.lifecycle.runtime.compose)
 
+      implementation(projects.crosslensCompose)
       implementation(projects.crosslensCore)
       implementation(projects.crosslensUi)
     }

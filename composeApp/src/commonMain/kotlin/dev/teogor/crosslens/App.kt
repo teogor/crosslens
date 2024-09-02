@@ -29,6 +29,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import dev.teogor.crosslens.compose.lifecycle.getConfigurationStateMonitor
 import dev.teogor.crosslens.core.buildHashCode
 import dev.teogor.crosslens.ui.rememberVisibilityState
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -49,6 +50,8 @@ public fun App() {
     visibility.show()
     visibility.toggle()
   }
+  val configurationStateMonitor = getConfigurationStateMonitor()
+  configurationStateMonitor.isChanging()
   remember {
     buildHashCode {
       append(visibility.isVisible)
